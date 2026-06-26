@@ -25,14 +25,14 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Features />
-      <Reviews reviews={topReviews} />
+      <Reviews />
       <Templates />
       <MobileApp />
       <AIVoice />
       <WhatsApp />
       <Channels />
       <BusinessTypes />
-      <Security features={appointmentFeatures} />
+      <Security/>
       <HowItWorks />
       <Trial />
       <Footer />

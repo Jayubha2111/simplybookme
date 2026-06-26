@@ -1,54 +1,46 @@
-import mongoose, { Schema, models, model } from 'mongoose'
+import { Schema, model, models, Model, InferSchemaType } from "mongoose";
 
-export interface ICompany {
-  _id?: string
-  userId: string
-  ownerName: string
-  companyLogin: string   // unique URL slug — e.g. "jayraj" → jayraj.simplybook.me
-  phone: string
-  category: string
-  country?: string
-  state?: string
-  city?: string
-  zip?: string
-  address?: string
-  createdAt?: Date
-}
-
-const CompanySchema = new Schema<ICompany>(
+const CompanySchema = new Schema(
   {
-    userId: {
-      type: String,
-      required: true,
-    },
+    userId: { type: String, required: true },
+
     ownerName: {
       type: String,
       required: true,
-      trim: true,
     },
+
     companyLogin: {
       type: String,
       required: true,
       unique: true,
       lowercase: true,
-      trim: true,
     },
+
     phone: {
       type: String,
       required: true,
     },
+
     category: {
       type: String,
       required: true,
     },
+
     country: String,
     state: String,
     city: String,
     zip: String,
     address: String,
   },
-  { timestamps: true }
-)
+  {
+    timestamps: true,
+  }
+);
 
-const Company = models.Company || model<ICompany>('Company', CompanySchema)
-export default Company
+export type ICompany = InferSchemaType<typeof CompanySchema>;
+
+const Company =
+  (models.Company as Model<ICompany>) ||
+  model<ICompany>("Company", CompanySchema);
+
+export default Company;
