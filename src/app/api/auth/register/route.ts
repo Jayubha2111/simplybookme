@@ -1,65 +1,95 @@
-import { NextRequest, NextResponse } from 'next/server'
-import bcrypt from 'bcryptjs'
-import { connectDB } from '@/lib/mongodb'
-import User from '@/models/User'
+import { NextRequest, NextResponse } from "next/server";
+import bcrypt from "bcryptjs";
+
+import { connectDB } from "@/lib/mongodb";
+import User from "@/models/User";
+
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
 
 export async function POST(req: NextRequest) {
   try {
-    const { name, email, password } = await req.json()
+    await connectDB();
 
-    // Basic validation
+    const body = await req.json();
+
+    const name = body.name?.trim();
+    const email = body.email?.toLowerCase().trim();
+    const password = body.password;
+
     if (!name || !email || !password) {
       return NextResponse.json(
-        { error: 'Name, email and password are required' },
-        { status: 400 }
-      )
+        {
+          error: "Name, email and password are required",
+        },
+        {
+          status: 400,
+        }
+      );
     }
 
     if (password.length < 6) {
       return NextResponse.json(
-        { error: 'Password must be at least 6 characters' },
-        { status: 400 }
-      )
+        {
+          error: "Password must be at least 6 characters",
+        },
+        {
+          status: 400,
+        }
+      );
     }
 
-    await connectDB()
+    const existing = await User.findOne({
+      email,
+    });
 
-    // Check if email already exists
-    const existing = await User.findOne({ email: email.toLowerCase() })
     if (existing) {
       return NextResponse.json(
-        { error: 'An account with this email already exists' },
-        { status: 409 }
-      )
+        {
+          error: "Email already exists",
+        },
+        {
+          status: 409,
+        }
+      );
     }
 
-    // Hash password
-    const hashedPassword = await bcrypt.hash(password, 12)
+    const hashedPassword = await bcrypt.hash(
+      password,
+      12
+    );
 
-    // Save user
     const user = await User.create({
       name,
-      email: email.toLowerCase(),
+      email,
       password: hashedPassword,
-      provider: 'credentials',
-    })
+      provider: "credentials",
+    });
 
     return NextResponse.json(
       {
-        message: 'Account created successfully',
+        success: true,
+        message: "Registration successful",
         user: {
           id: user._id.toString(),
           name: user.name,
           email: user.email,
         },
       },
-      { status: 201 }
-    )
-  } catch (error: any) {
-    console.error('Register error:', error)
+      {
+        status: 201,
+      }
+    );
+  } catch (err) {
+    console.error("Register Error:", err);
+
     return NextResponse.json(
-      { error: 'Something went wrong. Please try again.' },
-      { status: 500 }
-    )
+      {
+        error: "Internal Server Error",
+      },
+      {
+        status: 500,
+      }
+    );
   }
 }
