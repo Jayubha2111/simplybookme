@@ -2,11 +2,11 @@
   "name": "simplybookme-landing",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
-  },
+"scripts": {
+  "dev": "next dev",
+  "build": "next build",
+  "start": "node server.js"
+},
   "dependencies": {
     "bcryptjs": "^3.0.3",
     "mongoose": "^8.18.3",
