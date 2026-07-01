@@ -19,8 +19,8 @@ export interface Review {
 }
 
 const images: Record<string, string> = {
-  'logo.svg': '/Group4.svg',
-  'Group4.svg': '/Group4.svg',
+  'logo.svg': '/Group4.png',
+  'Group4.svg': '/Group4.png',
   'avatar.svg': '/avatar.png',
   'loading-spinner.svg': '/loading-spinner.png',
   'error-icon.svg': '/error-icon.png',
@@ -106,30 +106,30 @@ export function getTopReviews(limit = 3): Review[] {
   const customerReviews: Review[] = [
     {
       id: 1,
-      name: 'Olivia Bennett',
+      name: 'Sandeep Shah',
       role: 'Owner, Bloom Hair Studio',
-      initials: 'OB',
+      initials: 'SS',
       rating: 4.8,
       text: 'SimplybookME transformed how we manage appointments. No-shows dropped by 40% in our first month thanks to automatic reminders. The interface is intuitive and our clients love the booking flexibility.',
-      avatar: 'ob'
+      avatar: 'ss'
     },
     {
       id: 2,
-      name: 'Daniel Park',
+      name: 'Vaishali Dave',
       role: 'Founder, North Strength Gym',
-      initials: 'DP',
+      initials: 'VD',
       rating: 4.6,
       text: 'The custom features let me build exactly the workflow we needed — from intake forms to membership renewals. Game changer! The analytics help us understand our clients better.',
-      avatar: 'dp'
+      avatar: 'vd'
     },
     {
       id: 3,
-      name: 'Sofia Romero',
+      name: 'Niyat bhatt',
       role: 'Director, Serenity Wellness Spa',
-      initials: 'SR',
+      initials: 'NB',
       rating: 4.9,
       text: 'Clients love the branded app and we love how much time we save. Support is genuinely 24/7 — I\'ve tested it. The booking system is seamless.',
-      avatar: 'sr'
+      avatar: 'nb'
     }
   ];
 

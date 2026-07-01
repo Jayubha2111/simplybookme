@@ -1,11 +1,11 @@
 export default function Hero() {
   return (
-    <section className="pt-24 pb-16 bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="min-h-screen flex items-center pt-24 pb-16 bg-white overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 w-full">
         <div className="flex flex-col lg:flex-row items-center gap-12">
           {/* Left Content */}
-          <div className="flex-1 max-w-xl">
-            <h1 className="text-5xl lg:text-6xl text-[#121212] leading-tight mb-6">
+          <div className="flex-1 max-w-xl text-center lg:text-left mx-auto lg:mx-0">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl text-[#121212] leading-tight mb-6">
               Online booking
               <br />
               system for{' '}
@@ -27,8 +27,8 @@ export default function Hero() {
           </div>
 
           {/* Right Dashboard Preview */}
-          <div className="flex-1 relative">
-            <div className="bg-gradient-to-br from-[#e8f7fd] to-[#f0f9ff] rounded-2xl p-6 shadow-lg">
+          <div className="flex-1 relative w-full max-w-xl lg:max-w-none">
+            <div className="bg-gradient-to-br from-[#e8f7fd] to-[#f0f9ff] rounded-2xl p-4 sm:p-6 shadow-lg">
               {/* Dashboard Mock */}
               <div className="bg-white rounded-xl shadow-md overflow-hidden">
                 {/* Top Bar */}
@@ -39,17 +39,17 @@ export default function Hero() {
                     <div className="w-3 h-3 rounded-full bg-green-400"/>
                   </div>
                   <div className="flex-1 flex justify-end gap-2">
-                    <span className="text-xs text-white bg-[#00AEEE] px-3 py-1 rounded">Last 7 days</span>
-                    <span className="text-xs text-white bg-[#00AEEE] px-3 py-1 rounded">Last 30 days</span>
+                    <span className="hidden sm:inline text-xs text-white bg-[#00AEEE] px-3 py-1 rounded">Last 7 days</span>
+                    <span className="hidden sm:inline text-xs text-white bg-[#00AEEE] px-3 py-1 rounded">Last 30 days</span>
                   </div>
                 </div>
 
                 {/* Dashboard Content */}
-                <div className="p-5">
+                <div className="p-4 sm:p-5">
                   <p className="text-xs text-gray-400 mb-4">Performance summary across All forms</p>
 
                   {/* Stats Grid */}
-                  <div className="grid grid-cols-3 gap-3 mb-5">
+                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-5">
                     <div className="border border-gray-100 rounded-lg p-3">
                       <p className="text-xs text-gray-400 mb-1">TOTAL VISITS</p>
                       <p className="text-xl font-bold text-gray-800">815</p>
@@ -77,7 +77,7 @@ export default function Hero() {
                   </div>
 
                   {/* Charts Row */}
-                  <div className="grid grid-cols-2 gap-3">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {/* Line Chart */}
                     <div className="border border-gray-100 rounded-lg p-3">
                       <p className="text-xs text-gray-400 mb-3">Visits Over Time</p>

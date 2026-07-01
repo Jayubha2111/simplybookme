@@ -1,6 +1,6 @@
 export default function AIVoice() {
   return (
-    <section className="py-20 bg-[#F8F8F8]">
+    <section className="py-20 px-6 bg-[#F8F8F8]">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col lg:flex-row items-center gap-16">
           {/* Left Content */}

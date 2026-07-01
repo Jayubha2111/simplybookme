@@ -132,15 +132,7 @@ export default function WhatsApp() {
               ))}
             </ul>
 
-            <a
-              href="#"
-              className="inline-flex items-center gap-2 text-[#00AEEE] text-sm font-semibold hover:underline"
-            >
-              Learn more about WhatsApp notifications
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                <path d="M3 7h8M7 3l4 4-4 4" stroke="#00AEEE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </a>
+       
           </div>
 
         </div>

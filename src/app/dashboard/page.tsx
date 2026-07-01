@@ -34,7 +34,7 @@ export default function Dashboard() {
       <header className="bg-white border-b border-gray-100 shadow-sm">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <Image src="/Group4.svg" alt="SimplyBookME" width={150} height={36} className="h-9 w-auto" />
+            <Image src="/Group4.png" alt="SimplyBookME" width={150} height={36} className="h-9 w-auto" />
           </div>
           <div className="flex items-center gap-4">
             <span className="text-sm text-gray-600 hidden sm:block">

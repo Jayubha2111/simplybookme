@@ -1,21 +1,21 @@
 const reviews = [
   {
     text: '"SimplybookME transformed how we manage appointments. No-shows dropped by 40% in our first month thanks to automatic reminders."',
-    name: 'Olivia Bennett',
+    name: 'Sandeep Shah',
     role: 'Owner, Bloom Hair Studio',
-    initials: 'OB',
+    initials: 'SS',
   },
   {
     text: '"The custom features let me build exactly the workflow we needed — from intake forms to membership renewals. Game changer."',
-    name: 'Daniel Park',
+    name: 'Vaishali Dave',
     role: 'Founder, North Strength Gym',
-    initials: 'DP',
+    initials: 'VD',
   },
   {
     text: '"Clients love the branded app and we love how much time we save. Support is genuinely 24/7 — I\'ve tested it."',
-    name: 'Sofia Romero',
+    name: 'Niyat bhatt',
     role: 'Director, Serenity Wellness Spa',
-    initials: 'SR',
+    initials: 'NB',
   },
 ]
 

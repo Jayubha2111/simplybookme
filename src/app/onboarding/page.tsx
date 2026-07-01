@@ -164,7 +164,7 @@ export default function OnboardingPage() {
     <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center px-4 py-10">
       {/* Logo */}
       <div className="mb-6">
-        <Image src="/Group4.svg" alt="SimplyBookME" width={160} height={36} className="h-9 w-auto" />
+        <Image src="/Group4.png" alt="SimplyBookME" width={160} height={36} className="h-9 w-auto" />
       </div>
 
       <div className="bg-white rounded-2xl shadow-lg w-full max-w-md p-8">

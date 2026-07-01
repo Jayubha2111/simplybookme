@@ -89,7 +89,7 @@ export default function Navbar() {
           {/* Logo - click karke home pe jayega */}
           <Link href="/" className="flex items-center gap-2 shrink-0">
             <div className="relative h-9 sm:h-11 w-auto">
-              <Image src="/Group4.svg" alt="SimplyBookME Logo" width={180} height={40} priority className="h-full w-auto object-contain" />
+              <Image src="/Group4.png" alt="SimplyBookME Logo" width={180} height={40} priority className="h-full w-auto object-contain" />
             </div>
           </Link>
 

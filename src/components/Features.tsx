@@ -41,9 +41,6 @@ export default function Features() {
           <h2 className="text-3xl font-bold text-gray-900">
             Our <span className="text-[#00AEEE]">features</span>
           </h2>
-          <p className="text-gray-500 text-lg mt-2">
-            Everything you need to run a modern, service-based business — in one place.
-          </p>
         </div>
 
         {/* Feature Cards */}

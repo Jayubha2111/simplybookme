@@ -26,13 +26,13 @@ export default function Trial() {
 
           {/* Right: list + CTA */}
           <div className="max-w-md">
-            <ul className="space-y-5 mb-10">
+            <ul className="space-y-2 mb-10">
               {[
-                { icon: 'calendar', text: <><span className="font-semibold">10</span> included bookings during trial period</> },
-                { icon: 'check', text: <><span className="font-semibold">Most</span> Custom Features included</> },
-                { icon: 'laptop', text: <>Your own <span className="font-semibold">booking website</span></> },
+                { icon: 'calendar', text: <><span className="font-semibold">10</span>included bookings during trial period</> },
+                { icon: 'check', text: <><span className="font-semibold">Most</span>Custom Features included</> },
+                { icon: 'laptop', text: <>Your own<span className="font-semibold">booking website</span></> },
               ].map((item, i) => (
-                <li key={i} className="flex items-center gap-4 text-base text-gray-800">
+                <li key={i} className="flex items-center gap-1 text-base text-gray-800">
                   <span className="shrink-0 text-[#0F2C4E]">
                     {item.icon === 'calendar' && (
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
@@ -60,7 +60,7 @@ export default function Trial() {
 <a
             
               href="#"
-              className="inline-flex items-center gap-2 bg-[#00AEEE] hover:bg-[#00AEEE] text-white font-semibold px-7 py-4 rounded-full text-base transition-colors"
+              className="inline-flex items-center gap-2 bg-[#00AEEE] hover:bg-[#00AEEE] text-white font-semibold px-7 py-2 rounded-full text-base transition-colors"
             >
               <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
                 <path d="M2 12l19-9-6 9 6 9-19-9z" />

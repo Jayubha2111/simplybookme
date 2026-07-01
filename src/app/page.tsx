@@ -4,11 +4,11 @@ import Features from '../components/Features';
 import Reviews from '../components/Reviews';
 // import Templates from '../components/Templates';
 // import MobileApp from '../components/MobileApp';
-import AIVoice from '../components/AIVoice';
+// import AIVoice from '../components/AIVoice';
 import WhatsApp from '../components/WhatsApp';
 import Channels from '../components/Channels';
 import BusinessTypes from '../components/BusinessTypes';
-import Security from '../components/Security';
+// import Security from '../components/Security';
 // import HowItWorks from '../components/HowItWorks';
 import Trial from '../components/Trial';
 import Footer from '../components/Footer';
@@ -21,19 +21,19 @@ export default function Home() {
   const businessTypes = getAllBusinessTypes();
 
   return (
-    <main className="w-full overflow-x-hidden max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <main >
       <Navbar />
       <Hero />
       <Features />
       <Reviews />
       {/* <Templates /> */}
       {/* <MobileApp /> */}
-      <AIVoice />
+      {/* <AIVoice /> */}
       <WhatsApp />
       <BusinessTypes />
 
       <Channels />
-      <Security/>
+      {/* <Security/> */}
       {/* <HowItWorks />  */}
       <Trial />
       <Footer />

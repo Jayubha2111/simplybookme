@@ -18,7 +18,7 @@ export default function Footer() {
           <div>
             <div className="relative h-9 sm:h-11 w-auto mb-4">
               <Image
-                src="/Group4.svg"
+                src="/Group4.png"
                 alt="SimplyBookME Logo"
                 width={180}
                 height={40}
