@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { signIn, signOut, useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 
@@ -85,12 +86,12 @@ export default function Navbar() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100 shadow-sm">
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
 
-          {/* Logo */}
-          <div className="flex items-center gap-2">
+          {/* Logo - click karke home pe jayega */}
+          <Link href="/" className="flex items-center gap-2 shrink-0">
             <div className="relative h-9 sm:h-11 w-auto">
               <Image src="/Group4.svg" alt="SimplyBookME Logo" width={180} height={40} priority className="h-full w-auto object-contain" />
             </div>
-          </div>
+          </Link>
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">

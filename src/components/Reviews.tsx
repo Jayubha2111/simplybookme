@@ -71,20 +71,6 @@ export default function Reviews() {
           ))}
         </div>
 
-        {/* Rating Platforms */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 border-t border-gray-100 pt-10">
-          {ratings.map((r, i) => (
-            <div key={i} className="text-center">
-              <p className="text-sm text-gray-500 mb-1">{r.platform}</p>
-              <div className="flex items-center justify-center gap-1">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="#00AEEE">
-                  <path d="M8 1l1.9 3.8 4.2.6-3 2.9.7 4.2L8 10.4l-3.8 2 .7-4.2-3-2.9 4.2-.6L8 1z"/>
-                </svg>
-                <span className="text-base font-bold text-gray-800">{r.score}</span>
-              </div>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   )
